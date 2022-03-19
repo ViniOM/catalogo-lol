@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsIBMAJjd6wD///8AJQD6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREQAAEQAAABEBEBEBAAAAAAAAEQAAAAAAAAAAEAAAAAAiIgAQAAAAAiIgIgAAAAACAiAiAAAAAAICIAAAAAAABEQAAAAAAANENEREAAAAADNERERAAAAABEREREAAAAAAREREAAAAAAAAAAAAAAAAAAAAAAAADx5wAA4AMAAMADAADgBwAA+AcAAPAHAADgDwAA4AcAAOADAADAAwAAgAMAAMAHAADgBwAA8A8AAPgfAAD//wAA" rel="icon" type="image/x-icon" />
-    <title>Pokedex</title>
+    <link rel="stylesheet" href="../detalhes.css" type="text/css">
+    
+    <title>Pokedex </title>
 
 </head>
 <body>
 
     <header>
 
-        <div>
-        <img src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="pokemon logo" class="logo">
+        <div class="logo">
+        <img src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="pokemon logo">
         </div>
 
     </header>
@@ -22,7 +22,8 @@
     <main>
         <section id="cards">
             
-            <% pokedex.forEach((element) => {  %>
+            <% pokemonAtual.forEach((element) => {  %>
+
                 <a href="/detalhes/<%= element.id %> ">
 
                     <div class="cards">
@@ -37,6 +38,7 @@
 
                 </div>
             </a>
+
             <% }) %>
 
        </section>
