@@ -1,2 +1,2 @@
-web: npm start
-heroku restart
+web: npm start,
+web: heroku restart
