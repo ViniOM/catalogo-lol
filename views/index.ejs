@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsIBMAJjd6wD///8AJQD6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREQAAEQAAABEBEBEBAAAAAAAAEQAAAAAAAAAAEAAAAAAiIgAQAAAAAiIgIgAAAAACAiAiAAAAAAICIAAAAAAABEQAAAAAAANENEREAAAAADNERERAAAAABEREREAAAAAAREREAAAAAAAAAAAAAAAAAAAAAAAADx5wAA4AMAAMADAADgBwAA+AcAAPAHAADgDwAA4AcAAOADAADAAwAAgAMAAMAHAADgBwAA8A8AAPgfAAD//wAA" rel="icon" type="image/x-icon" />
-    <title>Pokedex</title>
+    <%- include('./components/head') %>
 
 </head>
 <body>
-
-    <header>
-
-        <div>
-        <img src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="pokemon logo" class="logo">
-        </div>
-
-    </header>
-
+   
+        <%- include('./components/nav') %>
+        
     <main>
+        
         <section id="cards">
             
-            <% pokedex.forEach((element) => {  %>
-                <a href="/detalhes/<%= element.id %> ">
+            <% ligadaslendas.forEach((Campeao) => { %>
+            
+            <div class="card">
 
-                    <div class="cards">
+                    <img class="imagem" src="<%= Campeao.imagemcard %> " alt=""> 
+                    <h3> <%= Campeao.nome %> <h3>
+                    <p class="descricao"> <%=Campeao.descricao %> </p>
+                 
+            </div>
 
-                        <img src="<%= element.img %>">
-
-                        <h2> <%= element.name %> </h2>
-
-                        <p class="numero">Nº: <%= element.num %> </p>
-
-                        <p>Tipo: <b> <%= element.type %> </b> </p>
-
-                </div>
-            </a>
-            <% }) %>
-
-       </section>
-
+            <% } ); %>
+        </section>
     </main>
+
+        <%- include('./components/footer') %>
+    
 </body>
 </html>
