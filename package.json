@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ViniOM/pokedex-mvc.git"
+    "url": "https://github.com/ViniOM/catalogo-lol"
   },
   "author": "Vinicios Gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ViniOM/pokedex-mvc/issues"
+    "url": "https://github.com/ViniOM/catalogo-lol/issues"
   },
-  "homepage": "https://github.com/ViniOM/pokedex-mvc#readme",
+  "homepage": "https://github.com/ViniOM/catalogo-lol#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
